@@ -3,6 +3,9 @@ const priceChanger = () => {
 	// let fractions = document.getElementsByClassName('sx-price-fractional');
 	let $prices = $('.sx-price-whole');
 	let $fractions = $('.sx-price-fractional');
+	let $googleFront = $('.O8U6h')
+	let $googleDeep = $('.e10twf T4OwTb')
+	let $amazon = $('#priceblock_ourprice')
 	console.log('prices', $prices[0]);
 	console.log('fractions', $fractions[0]);
 
@@ -11,6 +14,9 @@ const priceChanger = () => {
 		let randCent = Math.floor(Math.random() * 89) + 10;
 		$($prices[i]).text(randDollar);
 		$($fractions[i]).text(randCent);
+		$($amazon[i]).text(randDoller);
+		$($googleFront[i]).text(randDoller);
+		$($googleDeep[i]).text(randDollar);
 	}
 };
 
