@@ -1,15 +1,10 @@
 $(() => {
 	$('#dummy-btn').on('click', () => {
-		chrome.tabs.sendMessage();
+		chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+			const tabId = tabs[0].id;
+			chrome.tabs.sendMessage(tabId, { clicked: true });
+		});
 	});
 });
 
-function priceChanger() {
-	let prices = document.getElementsByClassName('sx-price-whole');
-	let fractions = document.getElementsByClassName('sx-price-fractional');
-
-	for (let i = 0; i < prices.length; i++) {
-		prices[i].innerHTML = '0';
-		fractions[i].innerHTML = '00';
-	}
-}
+// $(document).on('ready', () => {});

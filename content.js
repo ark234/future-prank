@@ -35,7 +35,10 @@ const genRandCent = () => {
 };
 
 const init = () => {
-	priceChanger();
+	// priceChanger();
+	chrome.runtime.onMessage.addListener(() => {
+		priceChanger();
+	});
 };
 
 init();
