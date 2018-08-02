@@ -3,21 +3,35 @@ const priceChanger = () => {
 	// let fractions = document.getElementsByClassName('sx-price-fractional');
 	let $prices = $('.sx-price-whole');
 	let $fractions = $('.sx-price-fractional');
-	let $googleFront = $('.O8U6h')
-	let $googleDeep = $('.e10twf T4OwTb')
-	let $amazon = $('#priceblock_ourprice')
-	console.log('prices', $prices[0]);
-	console.log('fractions', $fractions[0]);
+	let $googleFront = $('.O8U6h');
+	let $googleDeep = $('.e10twf T4OwTb');
+	let $amazon = $('#priceblock_ourprice');
+	let $ebay = $('.s-item__price');
 
-	for (let i = 0; i < $prices.length; i++) {
-		let randDollar = Math.floor(Math.random() * 2);
-		let randCent = Math.floor(Math.random() * 89) + 10;
-		$($prices[i]).text(randDollar);
-		$($fractions[i]).text(randCent);
-		$($amazon[i]).text(randDoller);
-		$($googleFront[i]).text(randDoller);
-		$($googleDeep[i]).text(randDollar);
-	}
+	let dollarBank = [$prices, $fractions, $googleFront, $googleDeep, $ebay];
+	let centBank = [$fractions];
+
+	$amazon.text(genRandDollar());
+
+	dollarBank.forEach(el => {
+		$(el).each((index, value) => {
+			$(value).text(genRandDollar());
+		});
+	});
+
+	centBank.forEach(el => {
+		$(el).each((index, value) => {
+			$(value).text(genRandCent());
+		});
+	});
+};
+
+const genRandDollar = () => {
+	return Math.floor(Math.random() * 2);
+};
+
+const genRandCent = () => {
+	return Math.floor(Math.random() * 89) + 10;
 };
 
 const init = () => {
