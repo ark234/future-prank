@@ -14,10 +14,16 @@ const priceChanger = () => {
 		let randCent = Math.floor(Math.random() * 89) + 10;
 		$($prices[i]).text(randDollar);
 		$($fractions[i]).text(randCent);
-		$($amazon[i]).text(randDoller);
-		$($googleFront[i]).text(randDoller);
-		$($googleDeep[i]).text(randDollar);
 	}
+
+	for (let i = 0; i < $googleFront.length; i++) {
+		$($amazon).text(randDollar)
+	}
+
+	for (let i = 0; i< googleDeep.length; i++) {
+		$($googleDeep).text(randDollar)
+	}
+
 };
 
 const init = () => {
