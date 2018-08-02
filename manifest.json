@@ -2,5 +2,10 @@
 	"name": "Future Prank",
 	"version": "1.0",
 	"description": "April Fools Forever",
+	"permissions": ["storage"],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
 	"manifest_version": 2
 }
