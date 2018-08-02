@@ -1,0 +1,13 @@
+
+
+div#container-all {
+    display: inline-flex;
+}
+
+button#dummy-btn {
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
