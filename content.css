@@ -1,7 +1,7 @@
 #loading-screen {
-	position: fixed;
-	width: 80%;
-	height: 80%;
-	border: 1px solid red;
-	z-index: 2;
+	position: fixed !important;
+	width: 80% !important;
+	height: 80% !important;
+	border: 1px solid red !important;
+	z-index: 2 !important;
 }

@@ -1,7 +1,8 @@
 const showLoading = () => {
+	$('#loading-screen').remove();
 	const $loadingScreen = $('<div id="loading-screen"/>');
 	console.log('hi', $loadingScreen);
-	$('#a-page').append($loadingScreen);
+	$('body').append($loadingScreen);
 };
 
 const priceChanger = () => {
