@@ -1,6 +1,10 @@
+const showLoading = () => {
+	const $loadingScreen = $('<div id="loading-screen"/>');
+	console.log('hi', $loadingScreen);
+	$('#a-page').append($loadingScreen);
+};
+
 const priceChanger = () => {
-	// let prices = document.getElementsByClassName('sx-price-whole');
-	// let fractions = document.getElementsByClassName('sx-price-fractional');
 	let $prices = $('.sx-price-whole');
 	let $fractions = $('.sx-price-fractional');
 	let $googleFront = $('.O8U6h');
@@ -35,8 +39,8 @@ const genRandCent = () => {
 };
 
 const init = () => {
-	// priceChanger();
 	chrome.runtime.onMessage.addListener(() => {
+		showLoading();
 		priceChanger();
 	});
 };
