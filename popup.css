@@ -1,10 +1,6 @@
 
 body {
-    margin-right: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
+  margin: 0px;
 }
 
 div#container-all {
@@ -24,5 +20,17 @@ button#dummy-btn {
     border-radius: 5px;
     width: 200px;
     height: 60px;
+
+    
+}
+
+button#dummy-btn:active {
+    outline: none;
+    transform: scale(.98);
+    transition: 0.5;
+}
+
+.button1 {
+    box-shadow: 0 8px 500px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
