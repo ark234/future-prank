@@ -1,6 +1,11 @@
 const showLoading = () => {
 	$('#loading-screen').remove();
-	const $loadingScreen = $('<div id="loading-screen"/>');
+	$('.box').remove();
+	$('body').addClass('blur');
+	const $loadingScreen = $(
+		'<div id="box-parent"><div class="box"><div class="cat"><div class="cat__body"></div><div class="cat__body"></div><div class="cat__tail"></div><div class="cat__head"></div></div></div></div>'
+		// '<div id="loading-screen"><p id="loading-text">Automatically find and apply coupon codes when you shop online!</p></div>'
+	);
 	console.log('hi', $loadingScreen);
 	$('body').append($loadingScreen);
 };
