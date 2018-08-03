@@ -132,7 +132,8 @@
 #loading-text {
 	color: rgb(133, 56, 56);
 	position: fixed;
-	top: 11em;
+	/* top: 11em; */
+	top: 4em;
 	right: 5em;
 	font-size: 40px;
 	z-index: 9999;
