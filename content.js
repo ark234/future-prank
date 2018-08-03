@@ -28,7 +28,6 @@ const priceChanger = () => {
 	let $googleFront = $('.O8U6h');
 	//let $googleDeep2 = $('.qptdjc')
 	let $googleDeep = $('.e10twf');
-	let $amazon = $('#priceblock_ourprice');
 	let $ebay = $('.s-item__price');
 
 	// our list of sites to cycle through
@@ -36,7 +35,6 @@ const priceChanger = () => {
 	let centBank = [$fractions];
 
 	// edge case sites that need different formatting
-	$amazon.text(genRandDollar());
 	$prices.text(genRandDollar());
 	$fractions.text(genRandCent());
 
@@ -71,6 +69,7 @@ const genRandCent = () => {
 };
 
 const init = () => {
+	$('#priceblock_ourprice').text(genRandDollar2());
 	chrome.runtime.onMessage.addListener(() => {
 		showLoading(priceChanger);
 	});
