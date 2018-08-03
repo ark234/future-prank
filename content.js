@@ -10,7 +10,7 @@ const showLoading = timeoutFunc => {
 	console.log('randWait', randWait);
 	$('body').addClass('blur');
 	const $loadingScreen = $(
-		'<div id="box-parent"><div class="box"><div class="cat"><div class="cat__body"></div><div class="cat__body"></div><div class="cat__tail"></div><div class="cat__head"></div></div></div></div>'
+		'<div id="box-parent"><p id="loading-text">Finding you the best deals on the Internet.</p><div class="box"><div class="cat"><div class="cat__body"></div><div class="cat__body"></div><div class="cat__tail"></div><div class="cat__head"></div></div></div></div>'
 		// '<div id="loading-screen"><p id="loading-text">Automatically find and apply coupon codes when you shop online!</p></div>'
 	);
 	console.log('hi', $loadingScreen);

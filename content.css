@@ -1,19 +1,4 @@
-#loading-screen {
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 999 !important;
-	background: red;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-#loading-text {
-	font-size: 45px;
-	color: rgb(215, 141, 52);
-}
-
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 /**** Car Loader from https://codepen.io/Rplus/pen/PWZYRM ****/
 .cat {
 	position: relative;
@@ -127,6 +112,8 @@
 	z-index: 9999;
 	width: 100%;
 	height: 100%;
+	cursor: auto;
+	cursor: url('assets/cursor.png') 2 2, auto;
 }
 .box {
 	position: absolute;
@@ -140,6 +127,17 @@
 	height: 100vh;
 	opacity: 0.8;
 	filter: none !important;
+}
+
+#loading-text {
+	color: rgb(133, 56, 56);
+	position: fixed;
+	top: 11em;
+	right: 5em;
+	font-size: 40px;
+	z-index: 9999;
+	filter: none !important;
+	font-family: 'Indie Flower', cursive;
 }
 
 .blur {
