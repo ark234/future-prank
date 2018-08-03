@@ -19,3 +19,13 @@ button#dummy-btn {
 	width: 200px;
 	height: 60px;
 }
+
+button#dummy-btn:active {
+	outline: none;
+	transform: scale(0.98);
+	transition: 0.5;
+}
+
+.button1 {
+	box-shadow: 0 8px 500px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
